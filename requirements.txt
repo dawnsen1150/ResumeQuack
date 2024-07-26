@@ -2,8 +2,6 @@ langchain_openai
 langchain
 langchain-community
 langchain_core
-PyPDF2
-python-dotenv
 langchain_groq
 fastapi
 json
