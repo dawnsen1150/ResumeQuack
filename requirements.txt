@@ -4,4 +4,4 @@ langchain-community
 langchain_core
 langchain_groq
 fastapi
-json
+uvicorn

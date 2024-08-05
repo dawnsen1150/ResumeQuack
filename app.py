@@ -1,27 +1,28 @@
 from fastapi import Depends, FastAPI, HTTPException
-from langchain_groq import ChatGroq
 from langchain_core.prompts.chat import ChatPromptTemplate
 from pydantic import BaseModel
-import json
+from langchain_openai import ChatOpenAI
+from langchain.output_parsers.json import SimpleJsonOutputParser
 
 app = FastAPI()
 
-with open("config.json","r") as f:
-    config=json.load(f)
+llm_openai = ChatOpenAI(model="gpt-4o-mini",api_key='',temperature=0.8)
 
-
-llm_groq = ChatGroq(
-    temperature=0,
-    model="llama3-70b-8192",
-    api_key=config['api'] 
-)
-
+json_parser = SimpleJsonOutputParser()
 
 @app.post("/resume_quack")
 async def generate(text, requirements):
 
     # System Prompt
-    system_message='''You are an AI resume builder. Your job is to modify a given resume based on the requirements given by the user. User will give you the resume and the requirements for a job in which he is interested. Your job is to read the resume and the requirements and modify the resume's text so that the job requirements are mentioned into the resume. If the current resume doesn't show something which is in the requirement, don't add that requirement. Your job is to change the existing text in a way so the the resume includes the requirement texts. When user don't meet a requirement. Don't add that into the resume. After completion of the modification, return the resume using the same format provided by the user.'''
+    system_message='''You are an AI resume editor who edits resumes based on job requirements. Your job is to edit a resume based on job requirements provided by the user. The user will give you a resume and the requirements for a job in which he is applying. Your final jon is to retrun the new edited resume to the user.To do that, You need to meet the instructions below  
+
+    Instructions:
+    - Change the sentences in the responsibilities to incorporate the sentences from the requirements as long as the candidate meets the requirements.
+    - In the edited version, total number of reposnsibilities must be equal to the total number of responsibilities in original version.
+    - Return your response in a json format. There must be 7 sections. They are personal_information, summary, work_experience, education, skills, others and modification. In work_experience section, make sure to add duration for each jobs and the roles.
+    - The modification section will include all the changes done by you in the new resume from the old one. For each changes, you need to list 3 things.which job in a company you changed the sentence,What is the changed sentence and what was the original sentence.
+
+    '''
 
 
     final_prompt = ChatPromptTemplate.from_messages(
@@ -30,10 +31,10 @@ async def generate(text, requirements):
             ("human", "This is the resume text {x} and this is the requirements {y}"),
         ]
     )
-    chain=final_prompt | llm_groq
+    chain=final_prompt | llm_openai | json_parser
     try:
         result=chain.invoke({"x":text,"y":requirements})
-        return result.content
+        return result
     except:
         raise HTTPException(status_code=result.status_code, detail=f"Failed to Generate Result")
 
