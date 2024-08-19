@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Display</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .job-header,
+        .education-header {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .responsibilities {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="personal_information" class="center-text"></section>
+
+        <hr>
+
+        <section id="summary">
+            <div class="section-title">Summary</div>
+            <div id="summary_content"></div>
+        </section>
+        
+        <hr>
+
+        <section id="work_experience">
+            <div class="section-title">Work Experience</div>
+            <div id="work_experience_content"></div>
+        </section>
+        
+        <hr>
+
+        <section id="education">
+            <div class="section-title">Education</div>
+            <div id="education_content"></div>
+        </section>
+        
+        <hr>
+
+        <section id="skills">
+            <div class="section-title">Skills</div>
+            <div id="skills_content"></div>
+        </section>
+        
+        <hr>
+
+        <section id="others">
+            <div class="section-title">Others</div>
+            <div id="others_content"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
