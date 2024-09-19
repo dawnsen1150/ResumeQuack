@@ -1,0 +1,68 @@
+{
+    "RefreshPeriodId": "14496b18-0558-4977-b2c6-36d74866bea9",
+    "Licensees": [
+        {
+            "AccountNumber": "1251600",
+            "Sales": [
+                {
+                    "ZipCode": "33603",
+                    "Amount": 60
+                },
+                {
+                    "ZipCode": "33602",
+                    "Amount": 400
+                },
+                {
+                    "ZipCode": "33601",
+                    "Amount": 300
+                },
+                {
+                    "ZipCode": "33606",
+                    "Amount": 440
+                }
+            ]
+        },
+        {
+            "AccountNumber": "1251630",
+            "Sales": [
+                {
+                    "ZipCode": "33603",
+                    "Amount": 600
+                },
+                {
+                    "ZipCode": "33602",
+                    "Amount": 400
+                },
+                {
+                    "ZipCode": "33601",
+                    "Amount": 80
+                },
+                {
+                    "ZipCode": "33606",
+                    "Amount": 40
+                }
+            ]
+        },
+        {
+            "AccountNumber": "1251623",
+            "Sales": [
+                {
+                    "ZipCode": "33603",
+                    "Amount": 90
+                },
+                {
+                    "ZipCode": "33602",
+                    "Amount": 40
+                },
+                {
+                    "ZipCode": "33601",
+                    "Amount": 353
+                },
+                {
+                    "ZipCode": "33606",
+                    "Amount": 450
+                }
+            ]
+        }
+    ]
+}
