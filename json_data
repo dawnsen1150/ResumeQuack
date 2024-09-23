@@ -6,50 +6,62 @@
             "Sales": [
                 {
                     "ZipCode": "33603",
+                    "Licensee": "1",
                     "Amount": 60
                 },
                 {
                     "ZipCode": "33602",
+                    "Licensee": "2",
                     "Amount": 401
                 },
                 {
                     "ZipCode": "33601",
+                    "Licensee": "3",
                     "Amount": 300
                 },
                 {
                     "ZipCode": "33606",
+                    "Licensee": "4",
                     "Amount": 440
                 },
                 {
                     "ZipCode": "33603",
+                    "Licensee": "1",
                     "Amount": 600
                 },
                 {
                     "ZipCode": "33602",
+                    "Licensee": "2",
                     "Amount": 400
                 },
                 {
                     "ZipCode": "33601",
+                    "Licensee": "3",
                     "Amount": 80
                 },
                 {
                     "ZipCode": "33606",
+                    "Licensee": "4",
                     "Amount": 40
                 },
                 {
                     "ZipCode": "33603",
+                    "Licensee": "1",
                     "Amount": 90
                 },
                 {
                     "ZipCode": "33602",
+                    "Licensee": "2",
                     "Amount": 40
                 },
                 {
                     "ZipCode": "33601",
+                    "Licensee": "3",
                     "Amount": 353
                 },
                 {
                     "ZipCode": "33606",
+                    "Licensee": "4",
                     "Amount": 450
                 }
             ]
