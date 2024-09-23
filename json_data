@@ -2,7 +2,7 @@
     "RefreshPeriodId": "14496b18-0558-4977-b2c6-36d74866bea9",
     "Licensees": [
         {
-            "AccountNumber": "1251600",
+            "AccountNumber": "9974000",
             "Sales": [
                 {
                     "ZipCode": "33603",
@@ -10,7 +10,7 @@
                 },
                 {
                     "ZipCode": "33602",
-                    "Amount": 400
+                    "Amount": 401
                 },
                 {
                     "ZipCode": "33601",
@@ -19,12 +19,7 @@
                 {
                     "ZipCode": "33606",
                     "Amount": 440
-                }
-            ]
-        },
-        {
-            "AccountNumber": "1251630",
-            "Sales": [
+                },
                 {
                     "ZipCode": "33603",
                     "Amount": 600
@@ -40,12 +35,7 @@
                 {
                     "ZipCode": "33606",
                     "Amount": 40
-                }
-            ]
-        },
-        {
-            "AccountNumber": "1251623",
-            "Sales": [
+                },
                 {
                     "ZipCode": "33603",
                     "Amount": 90
